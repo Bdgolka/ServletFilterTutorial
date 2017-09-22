@@ -69,6 +69,8 @@ public class ImageFilter implements Filter{
 			
 			//==>/ServletFilterTurotrial + /images/image-not-found.png
 			resp.sendRedirect(req.getContextPath() + this.notFoundImage);
+			
+			chain.doFilter(request, responce);
 		}
 	}
 
